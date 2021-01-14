@@ -22,3 +22,17 @@ In the case of an empty input string, your function should return an empty strin
 [output] string
 """
 
+import re
+
+def csBinaryToASCII(binary):
+    res = ''
+    x = re.findall('.{1,8}', binary)
+
+    for s in x:
+       y = chr(int(s,2))
+       res += y
+
+    return res
+
+print(csBinaryToASCII("011011000110000101101101011000100110010001100001"))
+print(csBinaryToASCII(""))
