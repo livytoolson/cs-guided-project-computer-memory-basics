@@ -15,17 +15,12 @@ The input integer will not be negative.
 """
 
 def csReverseIntegerBits(n):
-    # change input into binary
     x = bin(n).replace("0b", "")
     
-    # reverse binary
-    x = str(x)
-    binary_lst = list(x)
-    binary_lst.reverse()
-    x = "".join(binary_lst)
-    x = str(x)
+    x = list(x)
+    x.reverse()
+    x = "".join(x)
 
-    # change the binary into an integer
     x = int(x, 2)
     return x
 
